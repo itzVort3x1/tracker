@@ -21,7 +21,7 @@ mongoose.connection.on('connected', () => {
 });
 mongoose.connection.on('error', (err) => {
     console.log('Error connecting to mongo', err);
-})
+});
 
 app.get('/', requireAuth, (req, res) => {
     res.send(`Your email: ${req.user.email}`);
